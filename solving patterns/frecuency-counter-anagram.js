@@ -28,6 +28,7 @@ function validAnagram(word1, word2) {
 
 }
 
+
 console.log(validAnagram('', ''));
 console.log(validAnagram('aaz', 'zza'));
 console.log(validAnagram('anagram', 'nagaram'));
