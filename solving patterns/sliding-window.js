@@ -9,15 +9,16 @@ function maxSubarraySum(arr, num) {
   let maxTemp = 0;
 
   for (let i = 0; i < num; i++) {
-    max += arr[i];
+    maxTemp += arr[i];
   }
 
-  maxTemp = max;
+  max = maxTemp;
 
   for (let j = num; j < arr.length; j++) {
     maxTemp = maxTemp - arr[j - num] + arr[j];
-    max = Math.max(max, maxTemp);
+    max = Math.max(maxTemp, max);
   }
+
   return max;
 }
 
