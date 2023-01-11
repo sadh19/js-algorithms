@@ -14,15 +14,10 @@ function insertionSort(arr) {
 
     if (arr[i] < arr[i - 1]) {
       let tempI = i;
-
-      for (let j = i - 1; j >= 0; j--) {
-
+      for (let j = i - 1; j >= 0 && arr[tempI] < arr[j]; j--) {
         steps++;
-
-        if (arr[tempI] < arr[j]) {
-          swap(arr, tempI, j);
-          tempI = j;
-        }
+        swap(arr, tempI, j);
+        tempI = j;
       }
     }
   }
