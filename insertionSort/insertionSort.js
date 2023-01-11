@@ -5,12 +5,20 @@ function swap(arr, idx, idy) {
 }
 
 function insertionSort(arr) {
+
+  let steps = 0;
+
   for (let i = 1; i < arr.length; i++) {
+
+    steps++;
 
     if (arr[i] < arr[i - 1]) {
       let tempI = i;
 
       for (let j = i - 1; j >= 0; j--) {
+
+        steps++;
+
         if (arr[tempI] < arr[j]) {
           swap(arr, tempI, j);
           tempI = j;
@@ -19,6 +27,7 @@ function insertionSort(arr) {
     }
   }
 
+  console.log("Steps:", steps);
   return arr;
 
 }
