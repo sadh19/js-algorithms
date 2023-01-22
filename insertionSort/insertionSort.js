@@ -28,3 +28,4 @@ function insertionSort(arr) {
 }
 
 console.log(insertionSort([4, 1, 5, 8, 2, 6, 10, 11, 10, 9, 2, 1, 5]));
+console.log(insertionSort([4, 1, 5, 8, 2, 6, 10, 11, 10, 9, 2, 0, 100]));
